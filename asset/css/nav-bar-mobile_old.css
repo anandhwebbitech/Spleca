@@ -1,0 +1,467 @@
+/* Mobile only - Hide everything on desktop */
+
+
+/* Header */
+.wb-header {
+    background: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wb-hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.wb-hamburger-btn:active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wb-logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Header Actions */
+.wb-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wb-action-item {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.wb-action-item:active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wb-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #dc3545;
+    color: white;
+    border-radius: 10px;
+    min-width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0 4px;
+    border: 2px solid #0056b3;
+}
+
+.wb-cart-btn {
+    background: white;
+    color: #0056b3;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.wb-cart-btn i {
+    font-size: 16px;
+}
+
+/* Dropdown Menu */
+.wb-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    left: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    display: none;
+    z-index: 999;
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wb-dropdown.active {
+    display: block;
+}
+
+.wb-dropdown-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+}
+
+.wb-dropdown-item {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 15px;
+}
+
+.wb-dropdown-item:active {
+    background: #f0f0f0;
+}
+
+.wb-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.wb-dropdown-item i {
+    color: #666;
+    width: 20px;
+    text-align: center;
+}
+
+.wb-empty-state {
+    padding: 60px 20px;
+    text-align: center;
+    color: #999;
+}
+
+.wb-empty-state i {
+    font-size: 48px;
+    margin-bottom: 12px;
+    opacity: 0.3;
+}
+
+.wb-empty-state p {
+    font-size: 15px;
+}
+
+/* Mobile Sidebar */
+.wb-mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    visibility: hidden;
+}
+
+.wb-mobile-nav.active {
+    visibility: visible;
+}
+
+.wb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wb-mobile-nav.active .wb-overlay {
+    opacity: 1;
+}
+
+.wb-drawer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 340px;
+    height: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.wb-mobile-nav.active .wb-drawer {
+    transform: translateX(0);
+}
+
+.wb-drawer-header {
+    background: #0056b3;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wb-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.wb-close-btn:active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wb-mobile-menu {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.wb-mobile-menu>li>a,
+.wb-accordion-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.wb-mobile-menu>li>a:active,
+.wb-accordion-toggle:active {
+    background: #f8f9fa;
+}
+
+.wb-mobile-menu>li>a i,
+.wb-accordion-toggle i {
+    width: 20px;
+    text-align: center;
+}
+
+.wb-contact {
+    background: #28a745 !important;
+    color: white !important;
+    margin: 12px;
+    border-radius: 8px;
+    border: none !important;
+    font-weight: 600;
+}
+
+.wb-accordion-toggle {
+    justify-content: space-between;
+}
+
+.wb-arrow {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    color: #999;
+}
+
+.wb-accordion-toggle[aria-expanded="true"] .wb-arrow {
+    transform: rotate(90deg);
+}
+
+.wb-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #fafafa;
+}
+
+.wb-panel.active {
+    max-height: 2000px;
+}
+
+.wb-panel ul {
+    list-style: none;
+}
+
+.wb-panel li a,
+.wb-accordion-toggle.sub {
+    padding: 14px 20px 14px 22px;
+    font-size: 15px;
+}
+
+.wb-panel .wb-panel li a {
+    padding-left: 0px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.wb-footer {
+    border-top: 1px solid #eee;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    background: #fafafa;
+}
+
+.wb-footer a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wb-footer a:active {
+    background: #e9ecef;
+}
+
+/* Demo Content */
+.demo-content {
+    padding: 20px;
+}
+
+.demo-content h1 {
+    color: #333;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.demo-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+    .wb-header {
+        padding: 8px 12px;
+    }
+
+    .wb-header-actions {
+        gap: 4px;
+    }
+
+    .wb-cart-btn span {
+        display: none;
+    }
+
+    .wb-cart-btn {
+        padding: 8px;
+        border-radius: 50%;
+    }
+
+    .wb-drawer {
+        width: 90%;
+    }
+}
+
+/* Medium mobile devices */
+@media (min-width: 361px) and (max-width: 480px) {
+    .wb-drawer {
+        width: 85%;
+    }
+}
+
+/* Large mobile devices */
+@media (min-width: 481px) and (max-width: 768px) {
+    .wb-drawer {
+        max-width: 360px;
+    }
+
+    .wb-dropdown {
+        max-width: 400px;
+        right: 10px;
+        left: auto;
+    }
+}
+
+/* Landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .wb-header {
+        padding: 8px 15px;
+    }
+
+    .wb-mobile-menu>li>a,
+    .wb-accordion-toggle {
+        padding: 12px 20px;
+    }
+
+    .wb-drawer-header {
+        padding: 12px 15px;
+    }
+}
+
+a.a-edit {
+    padding: 5px 0 !important;
+    color: black;
+    text-decoration: none;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}

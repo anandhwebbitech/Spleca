@@ -1,0 +1,670 @@
+@media (max-width: 1200px) {
+    .spleca-main-title {
+        font-size: 56px;
+    }
+
+    .spleca-visual-area {
+        height: 600px;
+        margin-top: 60px;
+    }
+
+    .spleca-stat-card {
+        display: none;
+    }
+
+    .panel-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-section {
+        min-height: 500px;
+    }
+
+    .main-headline {
+        font-size: 44px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .section-heading {
+        font-size: 42px;
+    }
+
+    .hero-image-section {
+        height: 500px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .headline {
+        font-size: 3rem;
+    }
+
+    .metric-badge {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .welcome-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .welcome-title {
+        font-size: 38px;
+    }
+
+    .video-thumbnail {
+        height: 400px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) {
+    .wb-header {
+        display: none !important;
+    }
+}
+
+@media (max-width: 993px) {
+    .main-navigation {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-6 {
+        width: 100%;
+    }
+
+    .product-card {
+        height: 800px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .image-section {
+        margin-top: 20px;
+    }
+
+    .heading-text {
+        font-size: 2rem;
+    }
+
+    .product-card {
+        height: 580px;
+    }
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-panel {
+        padding: 50px 30px;
+    }
+
+    .image-panel {
+        min-height: 400px;
+    }
+
+    /* nav bar responsive */
+    .search-box {
+        max-width: 100%;
+        margin: 15px 0;
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .navbar-icons {
+        margin-top: 0;
+        justify-content: flex-start;
+    }
+
+    .navbar-brand {
+        order: 1;
+    }
+
+    .navbar-toggler {
+        order: 2;
+    }
+
+    .mega-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+    }
+
+    .mega-menu-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .second-swip {
+        height: 850px !important;
+    }
+    
+    .first-swip {
+        height: 850px !important;
+    }
+
+    .content-wrapper {
+        padding: 30px 40px;
+    }
+
+    .content-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+    }
+
+    .mining_section_heading_2025 h2 {
+        font-size: 1.5rem;
+    }
+
+    .mining_visit_box_2025,
+    .mining_text_block_2025,
+    .mining_cta_box_2025 {
+        padding: 25px 20px;
+    }
+
+    .mining_info_container_2025 {
+        grid-template-columns: 1fr;
+    }
+
+    .weicon-hero-banner {
+        padding: 40px 0;
+    }
+
+    .weicon-showcase-wrapper {
+        padding: 50px 0;
+    }
+
+    .weicon-visual-container {
+        height: 220px;
+    }
+
+    .blog-content-wrapper {
+        flex-direction: column;
+    }
+
+    .blog-sidebar-widget {
+        width: 100%;
+        position: static;
+    }
+
+    .blog-content-main {
+        padding: 25px;
+    }
+
+    .blog-post-title {
+        font-size: 1.5rem;
+    }
+
+    .chem-info-container {
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .chem-feature-card {
+        margin-bottom: 15px;
+        padding: 25px 15px;
+    }
+
+    .chem-card-title {
+        font-size: 20px;
+    }
+
+    .chem-hero-section {
+        padding: 40px 0;
+    }
+
+    .brouchers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product-title {
+        font-size: 22px;
+    }
+
+    .current-price {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .why-choose-section {
+        padding: 80px 0;
+    }
+
+    .section-heading {
+        font-size: 36px;
+    }
+
+    .content-wrapper {
+        gap: 40px;
+    }
+
+    .feature-item {
+        margin-bottom: 24px;
+    }
+
+    .hero-image-section {
+        height: 400px;
+    }
+
+    .quality-badge {
+        padding: 12px 24px;
+        font-size: 14px;
+        top: 20px;
+        right: 20px;
+    }
+
+    .about-hero {
+        padding: 80px 0;
+    }
+
+    .wrapper {
+        padding: 0 24px;
+    }
+
+    .headline {
+        font-size: 2.25rem;
+    }
+
+    .body-text {
+        font-size: 1rem;
+    }
+
+    .metric-badge {
+        position: static;
+        margin-top: 24px;
+        padding: 20px 32px;
+    }
+
+    .trust-bar {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .bg-decoration-1,
+    .bg-decoration-2 {
+        opacity: 0.5;
+    }
+
+    .info-section {
+        padding: 40px 30px;
+    }
+
+    .form-section {
+        padding: 40px 30px;
+    }
+
+    .info-section h2 {
+        font-size: 2rem;
+    }
+
+    .heading-primary {
+        font-size: 1.5rem;
+    }
+
+    .spleca-main-title {
+        font-size: 2rem;
+    }
+
+    .spleca-excellence-section {
+        padding: 50px 0;
+    }
+
+    .spleca-partner-box {
+        padding: 30px 20px;
+    }
+
+    .selection-grid {
+        gap: 20px;
+    }
+
+    .option-tile {
+        width: 100%;
+        max-width: 320px;
+        padding: 40px 30px;
+    }
+
+    .text-section {
+        padding: 50px 35px;
+    }
+
+    .main-headline {
+        font-size: 36px;
+    }
+
+    .body-text {
+        font-size: 16px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-caption {
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        padding: 25px 30px;
+    }
+
+    .caption-text {
+        font-size: 36px;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .sub-heading {
+        font-size: 1rem;
+    }
+
+    .product-card {
+        padding: 40px 30px;
+        height: 750px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-number {
+        font-size: 2rem;
+    }
+
+
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .lead {
+        font-size: 18px;
+    }
+
+    .image-area {
+        height: 450px;
+    }
+
+    .main-img {
+        width: 95%;
+        height: 85%;
+        box-shadow: 20px 20px 0 rgba(0, 89, 178, 0.2);
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-banner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-side {
+        height: 250px;
+    }
+
+    .image-side::after {
+        width: 100%;
+        height: 100px;
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(26, 54, 93, 0) 0%, #1a365d 100%);
+    }
+
+    .gradient-side {
+        min-height: 300px;
+    }
+
+    .content-wrapper {
+        position: relative;
+        transform: none;
+        padding: 40px 20px;
+    }
+
+    .content-wrapper h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .banner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .banner-image {
+        height: 250px;
+    }
+
+    .banner-image::after {
+        width: 100%;
+        height: 100px;
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(26, 54, 93, 0) 0%, #1a365d 100%);
+    }
+
+    .banner-gradient {
+        min-height: 300px;
+    }
+
+    .banner-content {
+        position: relative;
+        transform: none;
+        padding: 40px 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* footer */
+    .footer-main {
+        padding: 50px 0 0;
+    }
+
+    .logo-text {
+        font-size: 2.2rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .footer-title {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+    .map-container {
+        height: 220px;
+        margin-top: 20px;
+    }
+
+    .scroll-top {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* swiper */
+    .swiper {
+        height: 400px;
+    }
+
+    .welcome-section {
+        padding: 60px 0;
+    }
+
+    .welcome-container {
+        padding: 0 20px;
+    }
+
+    .welcome-title {
+        font-size: 32px;
+    }
+
+    .welcome-description {
+        font-size: 16px;
+    }
+
+    .play-button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .play-icon {
+        border-left: 22px solid #216cb0;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+    }
+
+    .form-container {
+        padding: 25px;
+    }
+
+    .otp-input {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .otp-container {
+        gap: 8px;
+    }
+}
+
+/* Show normally on mobile (<768px) */
+@media (max-width: 767px) {
+    
+    .product-image-container {
+        height: auto;
+    }
+
+    .sidebar {
+        min-height: 70vh;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .wb-header {
+        display: flex !important;
+    }
+
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .brouchers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brouchers-box {
+        min-height: 100px;
+    }
+
+    .hero-container {
+        padding: 60px 0 40px;
+    }
+
+    .glass-card {
+        padding: 40px 20px;
+        margin-bottom: 20px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .videos-box {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 575px) {
+    .poss {
+        position: relative;
+        left: 50px;
+
+    }
+
+    .mob-1 {
+        width: 100%;
+        margin: 10px !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .section-badge {
+        font-size: 12px;
+        padding: 10px 24px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .hero-image-section {
+        height: 300px;
+    }
+}
