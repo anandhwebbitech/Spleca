@@ -26,7 +26,7 @@
             </div>
 
             <div class="bento-box contact-box">
-                <h4 class="bento-title">Direct Contact</h4>
+                <h4 class="bento-title">Contact</h4>
                 <div class="contact-list">
                     <div class="c-item">
                         <small>Address</small>

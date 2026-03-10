@@ -120,4 +120,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('product-resource/delete/{id}', [ProductController::class, 'ProductResourceDestroy']);
     Route::get('product-resource/{product}', [ProductController::class, 'index']);
 
-Route::get('/get-subcategories/{id}', [CategoryController::class, 'getSubCategories'])->name('get.subcategories');});
+    Route::get('/get-subcategories/{id}', [CategoryController::class, 'getSubCategories'])->name('get.subcategories');
+    Route::get('/product-resource/{product_id}', [ProductController::class, 'getResources'])->name('product.resource.fetch');
+});

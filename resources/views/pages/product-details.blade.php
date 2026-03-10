@@ -142,7 +142,8 @@
                              </div>
                              <div class="meta-item">
                                  <span class="meta-label">Categories:</span>
-                                 <span class="meta-value">{{ $product->category->sub_category_name }}</span>
+                                 {{-- @dd($product->subcategoryname->sub_category_name); --}}
+                                 <span class="meta-value">{{ $product->categoryname->type_name }} > {{ $product->subcategoryname->sub_category_name }} </span>
                              </div>
                              <!--<div class="meta-item">-->
                              <!--    <span class="meta-label">Tags:</span>-->
@@ -154,7 +155,7 @@
                      <div class="col-lg-6">
                          <div class="product-details-section">
                              <h1 class="product-title1">{{ $product->name }}</h1>
-                             <p class="product-subtitle">{{ $product->short_description }}</p>
+                             <p class="product-subtitle">{{ $product->sub ?? '' }}</p>
 
                              <div class="d-flex gap-4 mb-3">
                                  <div class="meta-item border-0">

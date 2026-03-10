@@ -53,4 +53,11 @@ public function videos()
         ->where('type', 'video')
         ->where('status', 1);
 }
+
+public function categoryname() {
+    return $this->belongsTo(Category::class ,'category_id');
+}
+public function subcategoryname() {
+    return $this->belongsTo(SubCategory::class ,'sub_category_id');
+}
 }

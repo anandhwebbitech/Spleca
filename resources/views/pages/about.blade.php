@@ -31,7 +31,7 @@
                     <h1 class="headline">
                         Serving Diverse<br>
                         Industries with<br>
-                        <span class="accent-word">Precision</span>
+                        Precision
                     </h1>
 
                     <p class="body-text">
@@ -53,7 +53,7 @@
                         <div class="dot-pattern"></div>
 
                         <div class="main-visual">
-                            <img src="asset/img/product/about.jpg" alt="SPLECA Industrial Products and Solutions">
+                            <img src="asset/img/product/aboutimage.jpeg" alt="SPLECA Industrial Products and Solutions">
                         </div>
 
                         <div class="metric-badge">
@@ -114,7 +114,7 @@
                         <div id="priority-content">
                             <span class="badge-custom">SPLECA EXCELLENCE</span>
                             <h2 class="heading-text">
-                                Our top priority is delivering <span class="highlight-text">exceptional service.</span>
+                                Our top priority is delivering <span >exceptional service.</span>
                             </h2>
                             <p class="description-text">
                                 We envision a future where industrial processes are optimized with advanced solutions, reducing downtime, improving efficiency, and ensuring sustainability. SPLECA is committed to being a trusted industry leader, bringing cutting-edge technology and expertise to businesses that demand the best.
@@ -390,7 +390,7 @@
             document.getElementById('content-area').innerHTML = `
                 <span class="badge-custom">${data.badge}</span>
                 <h2 class="heading-text">
-                    ${data.heading} <span class="highlight-text">${data.highlight}</span>
+                    ${data.heading} <span >${data.highlight}</span>
                 </h2>
                 <p class="description-text">
                     ${data.description}

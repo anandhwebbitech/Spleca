@@ -403,7 +403,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::with([
-            'resources'
+            'resources','categoryname','subcategoryname'
         ])->findOrFail($id);
         $wishlist = session()->get('wishlist', []);
         $wishlistIds = array_keys($wishlist);
@@ -422,8 +422,8 @@ class ProductController extends Controller
             /* ================= VALIDATION ================= */
             $request->validate([
                 'datasheet_title.*' => 'nullable|string|max:255',
-                'datasheet_file.*'  => 'nullable|mimes:pdf|max:51200',
-                'brochure_file.*'   => 'nullable|mimes:pdf|max:102400',
+                'datasheet_file.*'  => 'nullable|mimes:pdf',
+                'brochure_file.*'   => 'nullable|mimes:pdf',
                 'video_url.*'       => 'nullable|url',
                 'status'            => 'required'
             ]);
@@ -1032,5 +1032,11 @@ class ProductController extends Controller
                 'message' => $e->getMessage()
             ]);
         }
+    }
+    public function getResources($productId)
+    {
+        $resources = ProductResource::where('product_id',$productId)->get();
+
+        return response()->json($resources);
     }
 }

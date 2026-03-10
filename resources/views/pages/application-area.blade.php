@@ -228,7 +228,7 @@
                                      </div>
 
                                      <div class="price-section">
-                                                                             <strong class="pri-sty">$ ${parseFloat(product.price).toFixed(2)}</strong>
+                                        <strong class="pri-sty">$ ${parseFloat(product.price).toFixed(2)}</strong>
 
                                      </div>
                                  </div>

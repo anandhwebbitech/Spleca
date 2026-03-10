@@ -538,6 +538,7 @@
                                             accept="application/pdf">
                                     </div>
                                 </div>
+                                <div id="datasheet-existing"></div>
                             </div>
 
                             <!-- BROCHURE CARD -->
@@ -554,6 +555,7 @@
                                     </small>
                                 </div>
                             </div>
+                            <div id="brochure-existing" class="mt-2"></div>
 
                             <!-- VIDEO CARD -->
                             <div class="resource-card mt-4">
@@ -571,6 +573,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="video-existing" class="mt-2"></div>
 
                             <!-- STATUS -->
                             <div class="mt-4">
@@ -1199,7 +1202,86 @@
                 });
 
             });
-        </script>
+
+            $(document).on('click', '.resourceBtn', function () {
+
+    let productId = $(this).data('product');
+
+    $('#resourceForm')[0].reset();
+    $('#resource_product_id').val(productId);
+
+    // Clear old data
+    $('#datasheet-existing').html('');
+    $('#brochure-existing').html('');
+    $('#video-existing').html('');
+
+    $.ajax({
+        url: "{{ route('product.resource.fetch', ':id') }}".replace(':id', productId),        
+        type: "GET",
+        success: function(res){
+
+            let basePath = "{{ url('public/uploads/resources') }}/";
+
+            res.forEach(function(item){
+
+                /* ================= DATASHEET ================= */
+                if(item.type === 'datasheet'){
+                    $('#datasheet-existing').append(`
+                        <div class="mt-2">
+                            <a href="${basePath+item.file}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                📄 ${item.title}
+                            </a>
+
+                            <button class="btn btn-sm btn-danger deleteResource"
+                                data-id="${item.id}">
+                                Delete
+                            </button>
+                        </div>
+                    `);
+                }
+
+                /* ================= BROCHURE ================= */
+                if(item.type === 'brochure'){
+                    $('#brochure-existing').append(`
+                        <div class="mt-2">
+                            <a href="${basePath+item.file}" target="_blank" class="btn btn-sm btn-outline-success">
+                                📘 ${item.title}
+                            </a>
+
+                            <button class="btn btn-sm btn-danger deleteResource"
+                                data-id="${item.id}">
+                                Delete
+                            </button>
+                        </div>
+                    `);
+                }
+
+                /* ================= VIDEO ================= */
+                if(item.type === 'video'){
+                    $('#video-existing').append(`
+                        <div class="mt-2">
+                            <a href="${item.video_url}" target="_blank">
+                                🎥 ${item.video_url}
+                            </a>
+
+                            <button class="btn btn-sm btn-danger deleteResource"
+                                data-id="${item.id}">
+                                Delete
+                            </button>
+                        </div>
+                    `);
+                }
+
+            });
+
+        }
+    });
+
+    $('#resourceModal').modal('show');
+
+});
+
+</script>
 
 
     @endpush
